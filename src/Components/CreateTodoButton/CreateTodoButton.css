@@ -1,0 +1,11 @@
+.button--create__todo{
+    width: 150px;
+    height: 40px;
+    color: var(--color-Brown);
+    border: none;
+    /* border: 1px solid var(--color-Brown); */
+    border-radius: 10px;
+    background-color: var(--color-Belge-shine);
+    font-size: 1rem;
+    box-shadow: 0px 5px 8px;
+}

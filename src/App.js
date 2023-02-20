@@ -1,23 +1,43 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
+import { Header } from './Components/Header/Header';
+import { TitleTodos } from './Components/TitleTodos/TitleTodos';
+import { TodoList } from './Components/TodoList/TodoList';
+import { TodoItem } from './Components/TodoItem/TodoItem';
+import { Searchertodo } from './Components/SearcherTodo/SearcherTodo';
+import { CreateTodoButton } from './Components/CreateTodoButton/CreateTodoButton';
+
 import './App.css';
 
 function App() {
+
+  const [ newTodo, setTodo ] = useState([])
+
+  const todo = [
+    {todo: "Hacer la cama", completed:false},
+    {todo: "Hacer la cena", completed:false},
+    {todo: "Preparar tema de física", completed:false}
+  ]
+
+  useEffect( ()=>{
+    setTodo(todo)
+  },[])
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Mi nuevo Todo List
-        </a>
-      </header>
+      <Header />
+      <TitleTodos />
+      <Searchertodo />
+      <TodoList>
+        {newTodo.map(el => {
+          return <TodoItem 
+                  key={el.todo}
+                  todo={el.todo}
+                  />
+          })
+        }
+      </TodoList>
+      <CreateTodoButton />
     </div>
   );
 }
