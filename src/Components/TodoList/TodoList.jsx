@@ -12,4 +12,3 @@ function TodoList (props) {
 }
 
 export { TodoList }
-// https://meet.google.com/nzw-axsu-dbg

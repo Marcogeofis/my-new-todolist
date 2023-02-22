@@ -1,9 +1,10 @@
 .searcher-input{
     width: 250px;
     height: 30px;
-    border: 1px solid var(--color-Brown);
+    border: .5px solid var(--color-Brown);
     border-radius: 10px;
     color: var(--color-Brown);
     padding-left: 10px;
     font-size: 1rem;
+    box-shadow: 0px 3px 8px;
 }

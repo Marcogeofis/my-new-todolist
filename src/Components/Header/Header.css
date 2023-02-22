@@ -1,0 +1,7 @@
+.container-header{
+    width: 100%;
+    height: auto;
+    background: var(--color-Belge-shine);
+    text-align: center;
+    border: 1px solid var(--color-Brown);
+}
